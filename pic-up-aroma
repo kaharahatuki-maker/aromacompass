@@ -1,1 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>本日のピックアップアロマ</title>
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+  <p>Q. 今の気分に一番近いのは？</p>
+  
+  <button>1. かなり疲れている</button><br><br>
+  <button>2. 少し張りつめている</button><br><br>
+  <button>3. ふつう・フラット</button><br><br>
+  <button>4. 気分を持ち上げたい</button><br><br>
+  <button>5. シャキッと切り替えたい</button><br><br>
 
+  <a href="index.html">トップに戻る</a>
+</body>
+</html>

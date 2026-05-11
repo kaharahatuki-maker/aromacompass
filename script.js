@@ -21,6 +21,16 @@ buttons.forEach(button) => {
 
       const randomItem =
         filtered[math.floor(math.random() * filtered.length)];
+
+      localStorage.setItem(
+        "aromaResult"
+        JSON.stringify(rondomItem)
+      );
+
+      location.href = "pich-up-result.html";
+    }catch(error){
+      console.error(error);
+      alert("データ取得に失敗しました");
     }
-  }
-}
+  });
+});

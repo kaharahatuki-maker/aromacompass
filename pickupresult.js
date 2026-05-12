@@ -22,7 +22,7 @@ if(questionbuttons.length > 0){
 const pickUpResult = document.querySelector("#pickUpResult");
 if(pickUpResult){
   async function loadResult(){
-    pickUpResult.innnerHTML="<p>診断中</p>"
+    pickUpResult.innerHTML="<p>診断中</p>"
     const questionId = Number(localStorage.getItem("questionId"));
     const response = await fetch(pickUp_API_URL);
     const data = await response.json();

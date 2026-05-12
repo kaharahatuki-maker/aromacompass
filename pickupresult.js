@@ -22,7 +22,6 @@ if(questionbuttons.length > 0){
 const pickUpResult = document.querySelector("#pickUpResult");
 if(pickUpResult){
   async function loadResult(){
-    pickUpResult.innerHTML="<p>診断中</p>"
     const questionId = Number(localStorage.getItem("questionId"));
     const response = await fetch(pickUp_API_URL);
     const data = await response.json();
@@ -34,6 +33,9 @@ if(pickUpResult){
     //ランダムで1つ選ぶ
     const randomResult = 
       results[Math.floor(Math.random() * results.length)];
+
+    //診断中を消す
+    loading.style.display = "none";
 
     pickUpResult.innerHTML=`
     <h2>${randomResult.aroma_name}</h2>

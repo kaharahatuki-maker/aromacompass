@@ -42,6 +42,8 @@ if(pickUpResult){
     <p>${randomResult.description}</p>
     <p>${randomResult.message}</p>
     `;
+
+    localStorage.removeItem("questionId");
   }
   
   loadResult();

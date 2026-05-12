@@ -42,7 +42,7 @@ if(pickUpResult){
     <h2>${randomResult.aroma_name}</h2>
     <p>${randomResult.description}</p>
     <p>${randomResult.message}</p>
-    `}
+    `;
   }
 loadResult();
 }

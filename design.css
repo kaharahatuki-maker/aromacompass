@@ -48,7 +48,7 @@ h1{
   margin-bottom: 40px;
 }
 
-.choice{
+.choices{
   display:flex;
   flex-direction: column;
   gap: 16px;
@@ -76,7 +76,7 @@ button:active{
   transform: scale(0.98);
 }
 
-.back-link{
+.back-line{
   display: inline-block;
   color:#8faa96;
   text-decoration: none;

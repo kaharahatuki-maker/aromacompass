@@ -38,9 +38,9 @@ if(pickUpResult){
     loading.style.display = "none";
 
     pickUpResult.innerHTML=`
-    <h2>${randomResult.aroma_name}</h2>
-    <p>${randomResult.description}</p>
-    <p>${randomResult.message}</p>
+    <h2>アロマ名：${randomResult.aroma_name}</h2>
+    <p>効能：${randomResult.description}</p>
+    <p>メッセージ${randomResult.message}</p>
     `;
 
     localStorage.removeItem("questionId");

@@ -63,6 +63,7 @@ button{
   padding: 16px;
   color: #5f5f5f;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 button:hover{

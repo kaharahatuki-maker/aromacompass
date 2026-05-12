@@ -22,7 +22,7 @@ if(questionbuttons.length > 0){
 const pickUpResult = document.querySelector("#pickUpResult");
 if(pickUpResult){
   async function loadResult(){
-    const questionId = localStorage.getItem("questionId");
+    const questionId = Number(localStorage.getItem("questionId"));
     const response = await fetch(pickUp_API_URL);
     const data = await response.json();
 

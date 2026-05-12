@@ -44,5 +44,7 @@ if(pickUpResult){
     <p>${randomResult.message}</p>
     `;
   }
-loadResult();
+  
+  loadResult();
+  
 }

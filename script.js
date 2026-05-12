@@ -33,7 +33,7 @@ if(pickUpResult){
     //questionIdが一致するデータだけ取得
     const results = data.filter(item =>
       item.question_id == questionId
-                               );
+  );
     //ランダムで1つ選ぶ
     const randomResult = 
       results[Math.floor(Math.random() * results.length)];

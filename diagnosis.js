@@ -113,7 +113,8 @@ async function loadResult(){
   const aromas = await response.json();
 
   const filteredAromas = aromas.filter(aroma =>
-    !aroma.caution.includes(caution)
+    if(!caution) return true;
+    return !aroma.caution.includes(caution);
   );
   console.log(filteredAromas);
 }

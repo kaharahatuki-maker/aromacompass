@@ -9,7 +9,7 @@ if(cautionButtons.length > 0) {
         "caution",
         button.dataset.caution
       );
-      location.href = ""
+      location.href = "aroma-diagnosis-q2.html"
     });
   });
 }

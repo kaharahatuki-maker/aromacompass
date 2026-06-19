@@ -103,3 +103,20 @@ if(sweetnessButtons.length > 0) {
 //==========
 //診断結果
 //==========
+
+const deagnosisResult = document.querySelector(#deagnosisResult)
+
+if(deagnosisResult){
+
+  const caution = localStorage.getItem("caution");
+  const time = localStorage.getItem("time");
+  const purpose = localStorage.getItem("purpose");
+  const lineage = localStorage.getItem("lineage");
+  const weight = localStorage.getItem("weight");
+  const sweetness = localStorage.getItem("sweetness");
+
+  loading.style.display = "none";
+
+  deagnosisResult.innerHTML = `
+  
+};

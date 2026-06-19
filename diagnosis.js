@@ -1,3 +1,5 @@
+console.log("diagnosis.js loaded");
+
 //==========
 //Q1.配慮事項
 //==========

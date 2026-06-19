@@ -144,7 +144,8 @@ async function loadResult(){
     return true;
 });
 
-  console.log(filteredAromas)
+  console.log(filteredAromas);
+}
 
 const diagnosisResult = document.querySelector("#diagnosisResult")
 

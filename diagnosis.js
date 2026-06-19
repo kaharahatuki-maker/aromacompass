@@ -107,15 +107,15 @@ if(sweetnessButtons.length > 0) {
 const API_URL = "https://script.google.com/macros/s/AKfycbxH4SzCvnLHeG15g0zy148MRLU0BMdQxd_wGCjIETgisLtEIymvbxV8hJzXrDO8Awf8/exec"
 async function loadResult(){
 
-  const caution = localStrage.getItem("caution");
+  const caution = localStorage.getItem("caution");
 
   const response = await fetch(API_URL);
   const aromas = await response.json();
 
-  const filteredAromas = aromas.filter(aroma =>
+  const filteredAromas = aromas.filter(aroma => {
     if(!caution) return true;
     return !aroma.caution.includes(caution);
-  );
+  });
   console.log(filteredAromas);
 }
 

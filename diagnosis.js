@@ -105,10 +105,15 @@ if(sweetnessButtons.length > 0) {
 //==========
 
 const API_URL = "https://script.google.com/macros/s/AKfycbxH4SzCvnLHeG15g0zy148MRLU0BMdQxd_wGCjIETgisLtEIymvbxV8hJzXrDO8Awf8/exec"
+const caution = localStorage.getItem("caution");
+const time = localStorage.getItem("time");
+const purpose = localStorage.getItem("purpose");
+const lineage = localStorage.getItem("lineage");
+const weight = localStorage.getItem("weight");
+const sweetness = localStorage.getItem("sweetness");
+const loading = document.querySelector("#loading")
+
 async function loadResult(){
-
-  const caution = localStorage.getItem("caution");
-
   const response = await fetch(API_URL);
   const aromas = await response.json();
 
@@ -123,16 +128,6 @@ async function loadResult(){
 const diagnosisResult = document.querySelector("#diagnosisResult")
 
 if(diagnosisResult){
-
-  const caution = localStorage.getItem("caution");
-  const time = localStorage.getItem("time");
-  const purpose = localStorage.getItem("purpose");
-  const lineage = localStorage.getItem("lineage");
-  const weight = localStorage.getItem("weight");
-  const sweetness = localStorage.getItem("sweetness");
-
-  const loading = document.querySelector("#loading")
-
   loading.style.display = "none";
 
   diagnosisResult.innerHTML = `

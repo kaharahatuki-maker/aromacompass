@@ -111,7 +111,6 @@ const purpose = localStorage.getItem("purpose");
 const lineage = localStorage.getItem("lineage");
 const weight = localStorage.getItem("weight");
 const sweetness = localStorage.getItem("sweetness");
-const loading = document.querySelector("#loading");
 
 async function loadResult(){
   const response = await fetch(API_URL);
@@ -128,7 +127,10 @@ async function loadResult(){
 const diagnosisResult = document.querySelector("#diagnosisResult")
 
 if(diagnosisResult){
+  const loading = document.querySelector("#loading");
+if(loading){
   loading.style.display = "none";
+  }
 
   diagnosisResult.innerHTML = `
    <p>${caution}</p>

@@ -9,6 +9,7 @@ if(cautionButtons.length > 0) {
         "caution",
         button.dataset.caution
       );
+      location.href = ""
     });
   });
 }

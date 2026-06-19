@@ -53,13 +53,52 @@ if(cautionButtons.length > 0) {
 //Q4.香りの系統
 //==========
 
+const cautionButtons = document.querySelectorAll("[data-lineage]");
+if(cautionButtons.length > 0) {
+  cautionButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      localStorage.setItem(
+        "lineage",
+        button.dataset.lineage
+      );
+      location.href = "aroma-diagnosis-q5.html"
+    });
+  });
+}
+
 //==========
 //Q5.重さ
 //==========
 
+const cautionButtons = document.querySelectorAll("[data-weight]");
+if(cautionButtons.length > 0) {
+  cautionButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      localStorage.setItem(
+        "weight",
+        button.dataset.weight
+      );
+      location.href = "aroma-diagnosis-q6.html"
+    });
+  });
+}
+
 //==========
 //Q6.甘さ
 //==========
+
+const cautionButtons = document.querySelectorAll("[data-sweetness]");
+if(cautionButtons.length > 0) {
+  cautionButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      localStorage.setItem(
+        "sweetness",
+        button.dataset.sweetness
+      );
+      location.href = "aroma-diagnosis-q6.html"
+    });
+  });
+}
 
 //==========
 //診断結果

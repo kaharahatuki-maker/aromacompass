@@ -118,5 +118,11 @@ if(deagnosisResult){
   loading.style.display = "none";
 
   deagnosisResult.innerHTML = `
-  
-};
+   <p>${caution}</p>
+   <p>${time}</p>
+   <p>${purpose}</p>
+   <p>${lineage}</p>
+   <p>${weight}</p>
+   <p>${sweetness}</p>
+   `;
+}

@@ -125,24 +125,26 @@ async function loadResult(){
       return false;
     }
     
-    if(purpose && !aroma.time.includes(purpose)){
+    if(purpose && !aroma.purpose.includes(purpose)){
       return false;
     }
 
-    if(lineage && !aroma.time.includes(lineage)){
+    if(lineage && !aroma.lineage.includes(lineage)){
       return false;
     }
 
-    if(weight && !aroma.time.includes(weight)){
+    if(weight && !aroma.weight.includes(weight)){
       return false;
     }
 
-    if(sweetness && !aroma.time.includes(sweetness)){
+    if(sweetness && !aroma.sweetness.includes(sweetness)){
       return false;
     }
 
     return true;
-}
+});
+
+  console.log(filteredAromas)
 
 const diagnosisResult = document.querySelector("#diagnosisResult")
 

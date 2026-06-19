@@ -115,6 +115,8 @@ if(diagnosisResult){
   const weight = localStorage.getItem("weight");
   const sweetness = localStorage.getItem("sweetness");
 
+  const loading = document.querySelector("#loading")
+
   loading.style.display = "none";
 
   diagnosisResult.innerHTML = `

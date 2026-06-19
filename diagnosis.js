@@ -110,7 +110,10 @@ async function loadResult(){
   const response = await fetch(API_URL);
   const aromas = await response.json();
 
-  console.log(aromas);
+  const filteredAromas = aromas.filter(aroma =>
+    !aroma.caution.includes(caution)
+  );
+  console.log(filteredAromas);
 }
 
 const diagnosisResult = document.querySelector("#diagnosisResult")

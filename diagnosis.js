@@ -1,6 +1,7 @@
 //==========
 //Q1.配慮事項
 //==========
+
 const cautionButtons = document.querySelectorAll("[data-caution]");
 if(cautionButtons.length > 0) {
   cautionButtons.forEach(button => {
@@ -17,6 +18,7 @@ if(cautionButtons.length > 0) {
 //==========
 //Q2.使用時間
 //==========
+
 const cautionButtons = document.querySelectorAll("[data-time]");
 if(cautionButtons.length > 0) {
   cautionButtons.forEach(button => {
@@ -33,6 +35,19 @@ if(cautionButtons.length > 0) {
 //==========
 //Q3.目的
 //==========
+
+const cautionButtons = document.querySelectorAll("[data-time]");
+if(cautionButtons.length > 0) {
+  cautionButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      localStorage.setItem(
+        "caution",
+        button.dataset.caution
+      );
+      location.href = "aroma-diagnosis-q3.html"
+    });
+  });
+}
 
 //==========
 //Q4.香りの系統

@@ -116,7 +116,8 @@ async function loadResult(){
     if(!caution) return true;
     return !aroma.caution.includes(caution);
   });
-  console.log(filteredAromas);
+  console.log(
+    filteredAromas.map(aroma => aroma.name));
 }
 
 const diagnosisResult = document.querySelector("#diagnosisResult")

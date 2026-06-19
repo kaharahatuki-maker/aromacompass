@@ -111,7 +111,7 @@ const purpose = localStorage.getItem("purpose");
 const lineage = localStorage.getItem("lineage");
 const weight = localStorage.getItem("weight");
 const sweetness = localStorage.getItem("sweetness");
-const loading = document.querySelector("#loading")
+const loading = document.querySelector("#loading");
 
 async function loadResult(){
   const response = await fetch(API_URL);

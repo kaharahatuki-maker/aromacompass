@@ -117,11 +117,31 @@ async function loadResult(){
   const aromas = await response.json();
 
   const filteredAromas = aromas.filter(aroma => {
-    if(!caution) return true;
-    return !aroma.caution.includes(caution);
-  });
-  console.log(
-    filteredAromas.map(aroma => aroma.name));
+    if(caution && aroma.caution.includes(caution)){
+      return false;
+    }
+
+    if(time && !aroma.time.includes(time)){
+      return false;
+    }
+    
+    if(purpose && !aroma.time.includes(purpose)){
+      return false;
+    }
+
+    if(lineage && !aroma.time.includes(lineage)){
+      return false;
+    }
+
+    if(weight && !aroma.time.includes(weight)){
+      return false;
+    }
+
+    if(sweetness && !aroma.time.includes(sweetness)){
+      return false;
+    }
+
+    return true;
 }
 
 const diagnosisResult = document.querySelector("#diagnosisResult")

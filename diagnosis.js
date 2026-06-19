@@ -24,8 +24,8 @@ if(cautionButtons.length > 0) {
   cautionButtons.forEach(button => {
     button.addEventListener("click", () => {
       localStorage.setItem(
-        "caution",
-        button.dataset.caution
+        "time",
+        button.dataset.time
       );
       location.href = "aroma-diagnosis-q3.html"
     });
@@ -36,15 +36,15 @@ if(cautionButtons.length > 0) {
 //Q3.目的
 //==========
 
-const cautionButtons = document.querySelectorAll("[data-time]");
+const cautionButtons = document.querySelectorAll("[data-purpose]");
 if(cautionButtons.length > 0) {
   cautionButtons.forEach(button => {
     button.addEventListener("click", () => {
       localStorage.setItem(
-        "caution",
-        button.dataset.caution
+        "purpose",
+        button.dataset.purpose
       );
-      location.href = "aroma-diagnosis-q3.html"
+      location.href = "aroma-diagnosis-q4.html"
     });
   });
 }

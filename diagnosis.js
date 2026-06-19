@@ -95,7 +95,7 @@ if(cautionButtons.length > 0) {
         "sweetness",
         button.dataset.sweetness
       );
-      location.href = "aroma-diagnosis-q6.html"
+      location.href = "diagnosis-result.html"
     });
   });
 }

@@ -104,9 +104,9 @@ if(sweetnessButtons.length > 0) {
 //診断結果
 //==========
 
-const deagnosisResult = document.querySelector(#deagnosisResult)
+const diagnosisResult = document.querySelector("#diagnosisResult")
 
-if(deagnosisResult){
+if(diagnosisResult){
 
   const caution = localStorage.getItem("caution");
   const time = localStorage.getItem("time");
@@ -117,7 +117,7 @@ if(deagnosisResult){
 
   loading.style.display = "none";
 
-  deagnosisResult.innerHTML = `
+  diagnosisResult.innerHTML = `
    <p>${caution}</p>
    <p>${time}</p>
    <p>${purpose}</p>

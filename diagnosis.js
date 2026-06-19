@@ -19,9 +19,9 @@ if(cautionButtons.length > 0) {
 //Q2.使用時間
 //==========
 
-const cautionButtons = document.querySelectorAll("[data-time]");
-if(cautionButtons.length > 0) {
-  cautionButtons.forEach(button => {
+const timeButtons = document.querySelectorAll("[data-time]");
+if(timeButtons.length > 0) {
+  timeButtons.forEach(button => {
     button.addEventListener("click", () => {
       localStorage.setItem(
         "time",
@@ -36,9 +36,9 @@ if(cautionButtons.length > 0) {
 //Q3.目的
 //==========
 
-const cautionButtons = document.querySelectorAll("[data-purpose]");
-if(cautionButtons.length > 0) {
-  cautionButtons.forEach(button => {
+const purposeButtons = document.querySelectorAll("[data-purpose]");
+if(purposeButtons.length > 0) {
+  purposeButtons.forEach(button => {
     button.addEventListener("click", () => {
       localStorage.setItem(
         "purpose",
@@ -53,9 +53,9 @@ if(cautionButtons.length > 0) {
 //Q4.香りの系統
 //==========
 
-const cautionButtons = document.querySelectorAll("[data-lineage]");
-if(cautionButtons.length > 0) {
-  cautionButtons.forEach(button => {
+const lineageButtons = document.querySelectorAll("[data-lineage]");
+if(lineageButtons.length > 0) {
+  lineageButtons.forEach(button => {
     button.addEventListener("click", () => {
       localStorage.setItem(
         "lineage",
@@ -70,9 +70,9 @@ if(cautionButtons.length > 0) {
 //Q5.重さ
 //==========
 
-const cautionButtons = document.querySelectorAll("[data-weight]");
-if(cautionButtons.length > 0) {
-  cautionButtons.forEach(button => {
+const weightButtons = document.querySelectorAll("[data-weight]");
+if(weightButtons.length > 0) {
+  weightButtons.forEach(button => {
     button.addEventListener("click", () => {
       localStorage.setItem(
         "weight",
@@ -87,9 +87,9 @@ if(cautionButtons.length > 0) {
 //Q6.甘さ
 //==========
 
-const cautionButtons = document.querySelectorAll("[data-sweetness]");
-if(cautionButtons.length > 0) {
-  cautionButtons.forEach(button => {
+const sweetnessButtons = document.querySelectorAll("[data-sweetness]");
+if(sweetnessButtons.length > 0) {
+  sweetnessButtons.forEach(button => {
     button.addEventListener("click", () => {
       localStorage.setItem(
         "sweetness",

@@ -127,6 +127,8 @@ if(diagnosisResult){
    <p>${weight}</p>
    <p>${sweetness}</p>
    `;
+
+  loadResult();
 }
 
 const API_URL = "https://script.googleusercontent.com/macros/echo?user_content_key=AUkAhnRvf1YZDscRpBB66mxwn40Tqc2rXrtY1iWZu1gOJAifx3ADgGgLfSBzk6yeEdVJfhDMij29Raow4ze_L93TOFhu1LmJ4rAwIPbjMsqWm69ZP6pkDup1I5SsIFbwJu4lm-tiVYci3kZyw2a0HJKmx3WNv42fHI0zwYBUT3-L4kiEgR0E17aKTyjneZA2tYrJcYw3qV8iTgqYhEm60T14UjaAGAJiy_DafzheiHKE-xSKFlOu5eg&lib=MU5vdp4znvY0XJ8J53xZdcCkAf2tFMscx"
@@ -138,4 +140,4 @@ async function loadResult(){
   console.log(aromas);
 }
 
-loadResult();
+

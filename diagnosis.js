@@ -137,13 +137,35 @@ async function loadResult(){
       return false;
     }
 
-    if(caution && aroma.caution.includes(caution)){
+    if(caution &&
+       aroma.caution &&
+       aroma.caution.includes(caution)){
       return false;
     }
 
     return true;
 });
 
+if (filteredAromas.length === 0){
+  diagnosisResult.innerHTML = `
+  <h2>診断結果</h2>
+  <p>条件に合うアロマがみつかりませんでした。</p>
+  `;
+  return;
+}
+
+//精油一覧生成
+const aromaList = filteredAromas.map(aroma => `
+<div class = "aroma-card">
+<h3>${aroma.name}</h3>
+<p>ノート：${aroma.note}</p>
+</div>
+`).join("");
+
+diagnosisResult.innerHTML = `
+<h2>診断結果</h2>
+${aromaList}
+`;  
   console.log(filteredAromas);
 }
 
@@ -154,17 +176,8 @@ if(diagnosisResult){
 if(loading){
   loading.style.display = "none";
   }
-
-  diagnosisResult.innerHTML = `
-   <p>${time}</p>
-   <p>${purpose}</p>
-   <p>${lineage}</p>
-   <p>${weight}</p>
-   <p>${sweetness}</p>
-   <p>${caution}</p>
-   `;
-
-  loadResult();
+  
+loadResult();
 }
 
 

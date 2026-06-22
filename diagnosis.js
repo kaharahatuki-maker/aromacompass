@@ -112,7 +112,7 @@ const weight = localStorage.getItem("weight");
 const sweetness = localStorage.getItem("sweetness");
 const caution = localStorage.getItem("caution");
 
-const diagonsisResult = document.querySelector("#diagonsisResult#");
+const diagonsisResult = document.querySelector("#diagnosisResult");
 
 async function loadResult(){
   const response = await fetch(API_URL);

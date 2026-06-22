@@ -1,22 +1,5 @@
 //==========
-//Q1.配慮事項
-//==========
-
-const cautionButtons = document.querySelectorAll("[data-caution]");
-if(cautionButtons.length > 0) {
-  cautionButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      localStorage.setItem(
-        "caution",
-        button.dataset.caution
-      );
-      location.href = "aroma-diagnosis-q2.html"
-    });
-  });
-}
-
-//==========
-//Q2.使用時間
+//Q1.使用時間
 //==========
 
 const timeButtons = document.querySelectorAll("[data-time]");
@@ -33,7 +16,7 @@ if(timeButtons.length > 0) {
 }
 
 //==========
-//Q3.目的
+//Q2.目的
 //==========
 
 const purposeButtons = document.querySelectorAll("[data-purpose]");
@@ -50,7 +33,7 @@ if(purposeButtons.length > 0) {
 }
 
 //==========
-//Q4.香りの系統
+//Q3.香りの系統
 //==========
 
 const lineageButtons = document.querySelectorAll("[data-lineage]");
@@ -67,7 +50,7 @@ if(lineageButtons.length > 0) {
 }
 
 //==========
-//Q5.重さ
+//Q4.重さ
 //==========
 
 const weightButtons = document.querySelectorAll("[data-weight]");
@@ -84,7 +67,7 @@ if(weightButtons.length > 0) {
 }
 
 //==========
-//Q6.甘さ
+//Q5.甘さ
 //==========
 
 const sweetnessButtons = document.querySelectorAll("[data-sweetness]");
@@ -96,6 +79,23 @@ if(sweetnessButtons.length > 0) {
         button.dataset.sweetness
       );
       location.href = "diagnosis-result.html"
+    });
+  });
+}
+
+//==========
+//Q6.配慮事項
+//==========
+
+const cautionButtons = document.querySelectorAll("[data-caution]");
+if(cautionButtons.length > 0) {
+  cautionButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      localStorage.setItem(
+        "caution",
+        button.dataset.caution
+      );
+      location.href = "aroma-diagnosis-q2.html"
     });
   });
 }

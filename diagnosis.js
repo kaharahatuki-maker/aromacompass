@@ -135,6 +135,8 @@ async function loadResult(){
     return true;
 });
 
+loading.style.display = "none";
+  
 if (filteredAromas.length === 0){
   diagnosisResult.innerHTML = `
   <h2>診断結果</h2>

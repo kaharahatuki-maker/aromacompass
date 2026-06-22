@@ -112,34 +112,23 @@ const weight = localStorage.getItem("weight");
 const sweetness = localStorage.getItem("sweetness");
 const caution = localStorage.getItem("caution");
 
+const diagonsisResult = document.querySelector("#diagnosisResult#");
+
 async function loadResult(){
   const response = await fetch(API_URL);
   const aromas = await response.json();
 
   const filteredAromas = aromas.filter(aroma => {
-    if(time && !aroma.time.includes(time)){
-      return false;
-    }
-    
-    if(purpose && !aroma.purpose.includes(purpose)){
-      return false;
-    }
 
-    if(lineage && !aroma.lineage.includes(lineage)){
-      return false;
-    }
-
-    if(weight && !aroma.weight.includes(weight)){
-      return false;
-    }
-
-    if(sweetness && !aroma.sweetness.includes(sweetness)){
-      return false;
-    }
-
+    if(time && !aroma.time.includes(time)) return false;
+    if(purpose && !aroma.purpose.includes(purpose)) return false;
+    if(lineage && !aroma.lineage.includes(lineage)) return false;
+    if(weight && !aroma.weight.includes(weight)) return false;
+    if(sweetness && !aroma.sweetness.includes(sweetness)) return false;
     if(caution &&
        aroma.caution &&
-       aroma.caution.includes(caution)){
+       aroma.caution.includes(caution)
+      ){
       return false;
     }
 
@@ -153,8 +142,9 @@ if (filteredAromas.length === 0){
   `;
   return;
 }
-
+//==========
 //精油一覧生成
+//==========
 const aromaList = filteredAromas.map(aroma => `
 <div class = "aroma-card">
 <h3>${aroma.name}</h3>
@@ -166,18 +156,8 @@ diagnosisResult.innerHTML = `
 <h2>診断結果</h2>
 ${aromaList}
 `;  
-  console.log(filteredAromas);
 }
-
-const diagnosisResult = document.querySelector("#diagnosisResult")
 
 if(diagnosisResult){
-  const loading = document.querySelector("#loading");
-if(loading){
-  loading.style.display = "none";
-  }
-  
-loadResult();
+  loadResult();
 }
-
-

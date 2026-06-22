@@ -155,7 +155,6 @@ const aromaList = filteredAromas.map(aroma => `
 `).join("");
 
 diagnosisResult.innerHTML = `
-<h2>診断結果</h2>
 ${aromaList}
 `;  
 }

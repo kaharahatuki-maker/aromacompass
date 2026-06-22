@@ -112,7 +112,7 @@ const weight = localStorage.getItem("weight");
 const sweetness = localStorage.getItem("sweetness");
 const caution = localStorage.getItem("caution");
 
-const diagonsisResult = document.querySelector("#diagnosisResult#");
+const diagonsisResult = document.querySelector("#diagonsisResult#");
 
 async function loadResult(){
   const response = await fetch(API_URL);
@@ -136,7 +136,7 @@ async function loadResult(){
 });
 
 if (filteredAromas.length === 0){
-  diagnosisResult.innerHTML = `
+  diagonsisResult.innerHTML = `
   <h2>診断結果</h2>
   <p>条件に合うアロマがみつかりませんでした。</p>
   `;
@@ -152,12 +152,12 @@ const aromaList = filteredAromas.map(aroma => `
 </div>
 `).join("");
 
-diagnosisResult.innerHTML = `
+diagonsisResult.innerHTML = `
 <h2>診断結果</h2>
 ${aromaList}
 `;  
 }
 
-if(diagnosisResult){
+if(diagonsisResult){
   loadResult();
 }

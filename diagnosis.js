@@ -10,7 +10,7 @@ if(timeButtons.length > 0) {
         "time",
         button.dataset.time
       );
-      location.href = "aroma-diagnosis-q3.html"
+      location.href = "aroma-diagnosis-q2.html"
     });
   });
 }
@@ -27,7 +27,7 @@ if(purposeButtons.length > 0) {
         "purpose",
         button.dataset.purpose
       );
-      location.href = "aroma-diagnosis-q4.html"
+      location.href = "aroma-diagnosis-q3.html"
     });
   });
 }
@@ -44,7 +44,7 @@ if(lineageButtons.length > 0) {
         "lineage",
         button.dataset.lineage
       );
-      location.href = "aroma-diagnosis-q5.html"
+      location.href = "aroma-diagnosis-q4.html"
     });
   });
 }
@@ -61,7 +61,7 @@ if(weightButtons.length > 0) {
         "weight",
         button.dataset.weight
       );
-      location.href = "aroma-diagnosis-q6.html"
+      location.href = "aroma-diagnosis-q5.html"
     });
   });
 }
@@ -78,7 +78,7 @@ if(sweetnessButtons.length > 0) {
         "sweetness",
         button.dataset.sweetness
       );
-      location.href = "diagnosis-result.html"
+      location.href = "aroma-diagnosis-q6.html"
     });
   });
 }
@@ -95,7 +95,7 @@ if(cautionButtons.length > 0) {
         "caution",
         button.dataset.caution
       );
-      location.href = "aroma-diagnosis-q2.html"
+      location.href = "diagnosis-result.html"
     });
   });
 }

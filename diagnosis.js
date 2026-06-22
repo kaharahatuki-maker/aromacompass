@@ -105,22 +105,18 @@ if(cautionButtons.length > 0) {
 //==========
 
 const API_URL = "https://script.google.com/macros/s/AKfycbxH4SzCvnLHeG15g0zy148MRLU0BMdQxd_wGCjIETgisLtEIymvbxV8hJzXrDO8Awf8/exec"
-const caution = localStorage.getItem("caution");
 const time = localStorage.getItem("time");
 const purpose = localStorage.getItem("purpose");
 const lineage = localStorage.getItem("lineage");
 const weight = localStorage.getItem("weight");
 const sweetness = localStorage.getItem("sweetness");
+const caution = localStorage.getItem("caution");
 
 async function loadResult(){
   const response = await fetch(API_URL);
   const aromas = await response.json();
 
   const filteredAromas = aromas.filter(aroma => {
-    if(caution && aroma.caution.includes(caution)){
-      return false;
-    }
-
     if(time && !aroma.time.includes(time)){
       return false;
     }
@@ -141,6 +137,10 @@ async function loadResult(){
       return false;
     }
 
+    if(caution && aroma.caution.includes(caution)){
+      return false;
+    }
+
     return true;
 });
 
@@ -156,12 +156,12 @@ if(loading){
   }
 
   diagnosisResult.innerHTML = `
-   <p>${caution}</p>
    <p>${time}</p>
    <p>${purpose}</p>
    <p>${lineage}</p>
    <p>${weight}</p>
    <p>${sweetness}</p>
+   <p>${caution}</p>
    `;
 
   loadResult();
